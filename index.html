@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body >
+
+    <div class="container1">
+        <div class="container2">
+            <button onclick="set_tab('tab1')">TELA INICIAL</button><button  onclick="set_tab('tab2')">CONFIGURAÇOES</button><button onclick="set_tab('tab3')">TERMOS DE SERVIÇOS</button>
+          </div>
+          <div class="content">
+            <div id= "tab1">
+                <img width=100 src="https://th.bing.com/th/id/R.c25ce34473de2201737eb925807bbd07?rik=5EmDKaai11Y8sQ&pid=ImgRaw&r=0">
+                <img src="https://th.bing.com/th/id/OIP.vh4GnVy5fXY63gqRsY5GBQHaEK?w=185&h=104&c=7&r=0&o=5&pid=1.7">
+                <img width=100 src="https://th.bing.com/th/id/R.c25ce34473de2201737eb925807bbd07?rik=5EmDKaai11Y8sQ&pid=ImgRaw&r=0">
+                <img src="https://th.bing.com/th/id/OIP.vh4GnVy5fXY63gqRsY5GBQHaEK?w=185&h=104&c=7&r=0&o=5&pid=1.7">
+
+              <h1>Tutorial Por José Gustavo</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima,
+                ratione quibusdam. Ea iusto laboriosam quam debitis eos eum voluptates
+                quos recusandae labore. Aperiam deleniti repellendus nam, sapiente
+                maxime odio fugiat.
+              </p>
+            </div>
+      
+            <div class="hidden" id="tab2">
+              <h3>Tab 2</h3>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Exercitationem fugiat recusandae, enim omnis ducimus nulla, officiis
+                labore aut repellat porro placeat neque sint sit! Alias excepturi
+                voluptates vel dolorem eos.
+              </p>
+              <button>BOTAO FICTICIO</button>
+              <button>BOTAO FICTICIO</button>
+
+              <button>BOTAO FICTICIO</button>
+
+              <button>BOTAO FICTICIO</button>
+
+            </div>
+      
+            <div class="hidden" id="tab3" >
+              <h2>Terms of services</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+                distinctio, explicabo atque quasi ea provident, consequuntur corporis
+                omnis praesentium, autem repellendus incidunt similique odit deserunt
+                quam dicta illo nostrum doloremque.
+              </p>
+              <h3>Lorem opsom</h3>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem eaque totam voluptate molestias autem fugit quas adipisci quidem, in, quo earum nesciunt dolorem deleniti repudiandae ut quasi eveniet sunt debitis.
+            </div>
+          </div>
+    </div>
+  
+  </body>
+</html>
+
+
+
+<style>
+    .hidden {
+        display: none;
+    }
+
+    .container1{
+        background-color: rgb(36, 36, 36);
+        color: white;
+        
+        
+        min-height: 400px;
+        display: flex;
+        max-width: 890px;
+        margin: auto;
+        max-width: 100%;
+    }
+
+    .selected-tab {
+        background-color: rgb(93, 93, 92);
+    }
+    .container1  button {
+        background-color: rgb(17, 17, 17);
+        padding: 12px;
+        color: white;
+        width: 100%;
+
+    }
+    .content {
+        padding: 24px;
+
+    }
+    .container2 {
+        display: flex;
+        flex-direction: column;
+        max-width: 180px;
+        min-width: 180px;
+        background-color: rgba(0, 0, 0, 0.345);
+    }
+</style>
+
+
+
+<script>
+
+
+    function set_tab(id){
+        document.querySelector("#tab1").classList.add("hidden")
+        document.querySelector("#tab2").classList.add("hidden")
+        document.querySelector("#tab3").classList.add("hidden")
+
+        document.querySelector("#"+id).classList.remove("hidden")
+
+    }
+</script>
